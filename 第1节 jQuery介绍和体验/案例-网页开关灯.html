@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        //点击按钮设置body的背景颜色，实现网页开关灯
+        /* window.onload = function () {  
+            //获取按钮，注册点击事件，设置body的背景颜色
+            document.getElementById("btn").onclick = function () {  
+                //判断 ---> 按钮的value值 开灯白色，关灯黑色
+                if(this.value == "关灯"){
+                    document.body.style.backgroundColor = "black";
+                    this.value = "开灯";
+                }
+                else{
+                    document.body.style.backgroundColor = "white";
+                    this.value = "关灯";
+                }
+            }
+        } */
+
+        //jQuery方式
+        $(function () {  
+            //获取按钮，注册点击事件
+            $("#btn").click(function () { 
+                //val("ghjk") 有参数是设置内容
+                if($(this).val() == "关灯")
+                {
+                    $("body").css("backgroundColor","black");
+                    $(this).val("开灯");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="关灯" id="btn">
+</body>
+</html>

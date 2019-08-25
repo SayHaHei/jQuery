@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.js"></script>
+    <script>
+        //页面的加载事件
+        /* window.onload = function () {  
+            console.log("哈哈，我又变帅了");
+        };//onload只执行这一个
+        window.onload = function () {  
+            console.log("哈哈，我中次啊票了");
+        }; */
+
+        //jQuery代码---完成的功能和window.onload相同
+        //第一种方法
+        //页面中所有内容加载完后，在执行
+        $(window).load(function () {  
+            concole.load("哈哈，我真的好帅");
+        });
+        $(window).load(function () {  
+            concole.load("哈哈，我中彩票了");
+        });
+
+        //第二种方法
+        //页面中的基本的标签加载完毕后就可以触发了
+        $(document).ready(function () {  
+            console.log("我中了500万");
+        });
+        //页面中的基本的标签加载完毕后就可以触发了
+        // jQuery(function () {  })
+        $(function () {  
+            console.log("这次中了1000万");
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

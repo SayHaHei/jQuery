@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.js"></script>
+    <script>
+        window.onload = function () {  
+            //btnObj就是DOM对象
+            // var btnObj = document.getElementById("btn");
+            // /* btnObj.onclick = function () {  
+            //     this.style.backgroundColor = "red";
+            // } */
+            // //DOM转jquery
+            // $(btnObj).click(function () {  
+            //     $(this).css({"backgroundColor":"red"});
+            // });
+            //把jQuery转成DOM有两种方式
+            /* 
+            1.$(btnObj).get(0);
+            2.$(btnObj)[0]
+            */
+            /* var btnObj = document.getElementById("btn");
+            var obj = $(btnObj).get(0);
+            var obj = $(btnObj)[0]; */
+            // obj.onclick
+            /* $(function () {  
+                $("#btn").click(function () {  
+                    $(this).css("backgroundColor","green");
+                });
+            }); */
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn">
+</body>
+</html>
