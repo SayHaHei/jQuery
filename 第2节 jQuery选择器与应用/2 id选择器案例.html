@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        //点击按钮,设置层中的显示内容为：这是一个层，同时设置这个层的背景颜色
+        $(function () {  
+            $("#btn").click(function () {  
+                $("#div").text("这是一个层");//相当于DOM中的innerText或者是textContent
+                $("#div").css({"backgroundColor":"red"});
+            });
+        });
+    </script>
+</head>
+<body>
+ <input type="button" value="显示效果" id="btn">
+ <div id="div"></div>
+</body>
+</html>

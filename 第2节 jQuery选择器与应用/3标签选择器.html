@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        //点击按钮，设置多个p标签显示内容为：我们都是p
+        $(function () {  
+            $("#btn").click(function () {  
+                $("p").text("我们都是p");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="显示效果" id="btn">
+    <p>zheshi</p>
+    <p>sd</p>
+    <p>sdw</p>
+    <p>sdf</p>
+    <p>opp</p>
+</body>
+
+</html>
