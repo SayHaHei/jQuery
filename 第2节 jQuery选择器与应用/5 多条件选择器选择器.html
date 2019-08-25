@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {  
+            //点击按钮，设置页面中的span标签，li标签，div标签的背景颜色
+            $("#btn").click(function () {  
+                $("span, p, li, div").css("backgroundColor", "red");
+            })
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="显示效果" id="btn">
+    <span>这是一个span标签</span>
+    <p>导师喜欢</p>
+    <ul>
+        <li>导师西</li>
+        <li>导师西法国红酒</li>
+        <li>导师西发过火</li>
+    </ul>
+    <div>
+
+    </div>
+</body>
+</html>
