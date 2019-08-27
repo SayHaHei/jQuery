@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {  
+            $("#uu>li").mouseover(function () {// >  直接子元素  
+                //鼠标进入
+                $(this).css("backgroundColor","red");
+            });
+            $("#uu>li").mouseover(function () {  
+                $(this).css("backgroundColor", "");
+            });
+        });
+        $(function () {  
+            $("#btn").click(function () {  
+                $("#dv *").css("backgroundColor", "red");//* 全部元素
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="显示效果" id="btn">
+    <div id="dv">
+        <p>这是一个p</p>
+        <span>这是一个span</span>
+    </div>
+    <ul id="uu">
+        <li>获取近啊</li>
+        <li>公牛</li>
+        <li>湖人</li>
+        <li>老牛</li>
+        <li>西安</li>
+        <li>地方</li>
+        <li>一</li>
+    </ul>
+</body>
+</html>

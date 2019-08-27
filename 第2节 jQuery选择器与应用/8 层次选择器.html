@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {  
+            $("#btn").click(function () {  
+                $("#db p").css("backgroundColor", "red");//获取的是div中的所有p元素
+                
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="显示效果" id="btn">
+    <div id="db">
+        <p>这是div中的第一个p标签</p>
+        <ul>
+            <li>这是第一个标签</li>
+            <li>
+                <p>这是第二个li中的第一个p标签</p>
+            </li>
+            <li>这是第三个li标签</li>
+        </ul>
+        <p>这是div第二个p标签</p>
+    </div>
+    <p>这是div外第一个p标签</p>
+    <p>这是div外第二个p标签</p>
+    <p>这是div外第三个p标签</p>
+
+</body>
+
+</html>

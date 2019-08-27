@@ -11,7 +11,6 @@
             width: 200px;
             height: 200px;
         }
-
     </style>
     <script src="../jquery-1.12.2.min.js"></script>
     <script>
@@ -22,14 +21,21 @@
         .css()方法，设置元素的样式，类似于style
         */
         $(function () {
+            $("#btn").click(function () {
+                //点击按钮设置文本框中的值
+                // $("#txt").val("哈哈我有变帅了");
+                
+                // $("#txt").css({"width":"300px", "height":"400px"});
+                // $("#txt").css("width", "300px");
 
+            });
         });
     </script>
 </head>
 
 <body>
     <input type="button" value="" id="btn">
-
+    <input type="text" value="这是文本框" id="txt">
 </body>
 
 </html>
