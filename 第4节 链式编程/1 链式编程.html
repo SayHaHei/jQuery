@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=G10, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {  
+            $("#btn").click(function () {
+                //返回值是对象,可以链式编程
+                //不是对象，会断链  
+                $("#dv").html("<p>这是一个p</p>").css("backgroundColor", "red");
+                /* $("#dv").html("<p>这是一个p</p>");
+                $("#dv").css("backgroundColor", "red"); */
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="显示效果" id="btn">
+    <div id="dv"></div>
+</body>
+
+</html>
