@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {  
+            $("#btn").click(function () {  
+                $("#dv").html("");//清空元素中的内容
+                $("#dv").empty();//清空元素中的内容
+                $("#dv").remove();//清空元素及元素中的内容--移除自身
+            });
+            $("#btn2").click(function () {  
+                var spanObj = $("#dv>span").clone();//复制元素
+                spanObj.css("fontSize", "20px");
+                spanObj.appendTo("#dv2");
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="显示效果" id="btn">    
+    <input type="button" value="显示效果" id="btn2">    
+    <div id="dv">
+        <span>见天盛世嫡妃</span>
+    </div>
+    <div id="dv2"></div>
+</body>
+</html>

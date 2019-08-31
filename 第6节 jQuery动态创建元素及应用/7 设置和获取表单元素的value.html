@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                /*console.log($(this).val());
+                  console.log($("#txt").val());
+                  console.log($("#rad").val());
+                  console.log($("#ck").val());
+                  console.log($("#sm").val()); */
+                //设置表单元素的value属性值
+                /* $(this).val("这种");
+                $("#txt").val("我是一个开心的按钮");
+                console.log($("tt").val()); //获取内容--推荐
+                console.log($("tt").text()); //获取内容,同上
+                //对于textarea，val()和text()相同 */
+
+                $("#se").val(4);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="显示" id="btn">
+    <input type="text" value="文本框" id="txt">
+    <input type="radio" name="sex" value="man" id="rad" />男
+    <input type="checkbox" value="1" id="ck">吃饭
+    <input type="submit" value="提交" id="sm">
+    <textarea name="" id="tt" cols="30" rows="10">
+        哈哈
+    </textarea>
+    <select name="" id="se">
+        <option value="1">南京</option>
+        <option value="2">广州</option>
+        <option value="3">重庆</option>
+        <option value="4">上海</option>
+        <option value="5">北京</option>
+    </select>
+</body>
+
+</html>

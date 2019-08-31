@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () { 
+                // console.log($("#ck").attr("checked"));//没有设置checked时失效
+                // console.log($("#ck").prop("checked"));//有效
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="显示装填" id="btn">
+    <input type="checkbox" name="" id="ck" value="1">打豆豆
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                // $("#dv").append("<a title='这是超链接' href='http://www.baidu.com'>巴蒂</a>");
+                var aObj = $("<a></a>");
+                aObj.attr("title", "110万");
+                aObj.attr("href", "http://www.itcast.cn");
+                aObj.text("传播智客");
+                $("#dv").append(aObj);
+                console.log(aObj.attr("href"));
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="设置超链接" id="btn">
+    <div id="dv"></div>
+</body>
+
+</html>
