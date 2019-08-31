@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {
+            /* 
+                参数：
+                1.是键值对----对象
+                2.时间---毫秒
+                3.匿名函数----回调函数
+            */
+            $("#btn").click(function () {
+                $("#dv").animate({
+                    "width": "300px",
+                    "height": "300px",
+                    "left": "300px",
+                    "position": "absolute",
+                    "display": "block"
+                }, 1000);
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="动画" id="btn">
+    <div id="dv" style="background-color: green;display: none"></div>
+</body>
+
+</html>

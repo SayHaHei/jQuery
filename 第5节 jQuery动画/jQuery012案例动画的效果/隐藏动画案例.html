@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+        }
+
+        img {
+            width: 90px;
+            height: 90px;
+            vertical-align: top;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                $("div>img:last-child").hide(800, function () {
+                    $(this).prev().hide(800, arguments
+                    .callee); //arguments.callee相当于递归$("div>img:last-child")
+                }); //div 中的img的最后一个元素 
+                // $("div>img:last-child").hide(800,arguments.callee);//div 中的img的最后一个元素
+            });
+            $("#btn2").click(function () {
+                $("div>img:first-child").hide(800, function () {
+                    $(this).next().hide(800, arguments
+                    .callee); //arguments.callee相当于递归$("div>img:last-child")
+                }); //div 中的img的最后一个元素
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="隐藏动画" id="btn1" />
+    <input type="button" value="显示动画" id="btn2" />
+    <div>
+        <img src="images/1.jpg" />
+        <img src="images/2.jpg" />
+        <img src="images/3.jpg" />
+        <img src="images/4.jpg" />
+    </div>
+</body>
+
+</html>
