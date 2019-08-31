@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        /*
+        DOM中创建元素
+        1.document.write("标签代码")缺陷：页面加载后创建元素，把页面中原有的内容都干掉
+        2.innerHTML
+        3.document.createElement
+        jquery中创建元素
+        1.$("标签的代码")
+        2.对象.html("标签的代码")
+        */
+       $(function () {  
+            $("#btn").click(function () {  
+                var a = $("<a href='http://www.baidu.com'>百度</a>");
+                // $("#dv").append(a);
+                // a.appendTo("#dv");
+                // $("#dv").prepend(a);//把元素插入到某个元素里的前面
+                $("#dv").before(a);//把元素插入到某个元素的后面，作为兄弟元素
+                $("#dv").after(a);//把元素插入到某个元素的后面，作为兄弟元素
+            });
+       });
+    </script>
+</head>
+<body>
+    <input type="button" value="创建元素" id="btn">
+    <div id="dv"></div>
+</body>
+</html>
