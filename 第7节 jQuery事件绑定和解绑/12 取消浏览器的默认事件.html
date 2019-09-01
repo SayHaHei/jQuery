@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {
+            $("#ak").click(function () { 
+                // e.preventDefault();
+                alert("超链接被点了");
+                return false;//取消超链接默认的点击事件
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="http://www.baidu.com" id="ak">传智播客 </a>
+
+</body>
+</html>

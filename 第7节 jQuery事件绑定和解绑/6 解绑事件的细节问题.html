@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {
+            //为div和p都绑定事件
+            $("#dv").click(function () { 
+                alert("dv被点了");
+            });
+            $("#dv").delegate("p", "click", function () {  
+                alert("p 被点了");
+            })
+            /* $("#dv>p").click(function () { 
+                alert("p被点了");
+            }); */
+            $("#btn1").click(function () { 
+                $("#dv").off("click");//只会移除自身的click，不会移除子元素的事件
+                //下面的代码是把子级元素的点击事件解绑，父级元素的点击事件还在
+                $("#dv").off("click", "**"); 
+                //移除父级元素和子级元素的所有的事件          
+                $("#dv").off();             
+            });
+            //如果父级元素和子级元素都是通过正常的方式绑定的时间，如果父级元素通过off解绑，那么子级元素不会解绑
+            //但是:如果子级元素是通过父级元素调用delegate绑定的时间，父级元素通过off解绑，那么父级元素和子级元素的相同事件都会解绑
+        });
+        /*
+            bind unbind
+            on off
+            delegate undelegate
+        */
+    </script>
+</head>
+
+<body>
+    <input type="button" value="绑定事件" id="btn1">
+    <input type="button" value="绑定事件" id="btn2">
+    <div id="dv">
+        <p>这是div中的一个p标签</p>
+    </div>
+</body>
+
+</html>

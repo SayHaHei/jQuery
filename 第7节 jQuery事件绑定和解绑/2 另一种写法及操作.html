@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {
+            var i = 0;
+            //绑定同一个事件
+            $("#btn").bind({
+                "mouseover mouseout": function (e) {
+                    i++;
+                    console.log(i);
+                }
+            });
+        });
+        //delegate ---为父级元素的子元素绑定事件
+        /*
+        参数：3个
+        1.要绑定事件的元素  -- p
+        2.要绑定的事件的名字 --- click
+        3.绑定事件的处理函数 --- 匿名函数
+        */
+        $(function () {
+            $("#btn").bind({
+                "click": function (e) {
+                    $("<p>这是一个p</p>").append($("#dv"));
+                    $("#dv").delegate("p", "click", function () {
+                        alert("我被点了");
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="显示效果" id="btn">
+    <div id="dv"></div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {
+            //为div中的按钮绑定事件
+            $("#dv").on("click", "input", function (event) {  
+                // console.log(arguments.length);
+                // console.log(arguments[0]);
+                console.log(event);
+                //event.delegate4Target ==== div
+                //event.currentTarget  ===== input
+                //event.target ====== input
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="dv">
+        <input type="button" value="按钮" id="btn">
+    </div>
+</body>
+</html>

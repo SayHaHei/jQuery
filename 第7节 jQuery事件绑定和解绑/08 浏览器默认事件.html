@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-1.12.2.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () { 
+                // $("#txt").focus();//获取焦点
+                // $("#txt").trigger("focus");//获取焦点
+                $("#txt").triggerHandler("focus");//获取焦点
+                $("#sp").text("文本框获取到的焦点了"); 
+                //focus和trigger的方式是相同的，都会触发浏览器默认的事件(光标在文本框中闪烁)               
+                //triggerHandler不会触发浏览器默认的事件
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="触发事件" id="btn">
+    <input type="text" value="" id="txt">
+    <span id="sp"></span>
+</body>
+</html>
